@@ -1,0 +1,53 @@
+export { future as theme } from 'mdx-deck/themes';
+import { Head, Appear } from 'mdx-deck';
+import { CodeSurfer } from 'mdx-deck-code-surfer';
+import nightOwl from 'prism-react-renderer/themes/nightOwl';
+
+<Head>
+  <title>ML in the Browser</title>
+</Head>
+
+## ML in the Browser
+### with Tensorflow.js
+
+<br />
+<br />
+
+#### Ed Atrero
+
+##### Weedmaps Tech Meetup
+
+---
+
+<CodeSurfer
+  code={require('!raw-loader!./code/train.js')}
+  lang="javascript"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    { range: [1, 67] },
+    { range: [9, 34] },
+    { lines: [12] },
+  ]}
+/>
+
+---
+
+ tf.sequential
+
+---
+
+<CodeSurfer
+  code={require('!raw-loader!./code/train.js')}
+  lang="javascript"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    { lines: [12] },
+    { lines: [13, 33], notes: "layers" },
+    { range: [14,17] },
+    { range: [18,24] },
+    { range: [25,32] },
+    { range: [9,34] },
+  ]}
+/>
