@@ -18,6 +18,25 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 ##### Weedmaps Tech Meetup
 
 ---
+<h1>Tensorflow</h1>
+
+<Appear>
+  <p>Library released by Google Brain team in 2015.</p>
+  <p>Processing multidimensional array (like neural networks)</p>
+  <p>CPUs, GPUs, TPUs</p>
+</Appear>
+
+---
+<h1>Tensorflow</h1>
+
+<Appear>
+  <p>Library released by Google Brain team in 2015.</p>
+  <p>Processing multidimensional array (like neural networks)</p>
+  <p>CPUs, GPUs, TPUs</p>
+  <p>architecture handles parallel</p>
+</Appear>
+
+---
 
 <CodeSurfer
   code={require('!raw-loader!./code/train.js')}
@@ -33,7 +52,14 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 
 ---
 
- tf.sequential
+<h1>tf.sequential()</h1>
+
+
+<Appear>
+  <p>Creates a tf.Sequential model.</p> 
+  <p>A sequential model is any model where the outputs of one layer are the inputs to the next layer</p>
+  <p>The model topology is a simple 'stack' of layers, with no branching or skipping.</p>
+</Appear>
 
 ---
 
@@ -51,3 +77,23 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
     { range: [9,34] },
   ]}
 />
+
+---
+
+train
+
+---
+
+<CodeSurfer
+  code={require('!raw-loader!./code/train.js')}
+  lang="javascript"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    { range: [57, 66] },
+  ]}
+/>
+
+---
+
+predict
