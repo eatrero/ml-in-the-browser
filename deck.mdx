@@ -37,6 +37,39 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 </Appear>
 
 ---
+Neural Networks
+
+---
+<h3>Convolutional Neural Networks</h3>
+![cnn](./static/cnn.png )
+
+convolution 
+
+kernel... looking for spatial coherence
+analagous to plaaying with slides
+
+O(n^2 * sizeof(layers) * sizeof(data_set)) = weeks w/ $10k rig of high end cards
+---
+
+<h3>convolution</h3>
+![cnn](./static/2d-convolution.gif)
+
+---
+
+<h3>weights</h3>
+![cnn](./static/weights.jpg)
+---
+Transfer Learning
+![cnn](./static/cnn.png )
+
+---
+<Appear>
+  <h1>1. Model</h1>
+  <h1>2. Train</h1>
+  <h1>3. Predict</h1>
+</Appear>
+
+---
 
 <CodeSurfer
   code={require('!raw-loader!./code/train.js')}
@@ -79,6 +112,9 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 />
 
 ---
+![gradient descent](./static/mobilenet.png )
+
+---
 
 train
 
@@ -94,6 +130,26 @@ train
   ]}
 />
 
+
+
+
+
 ---
 
+![gradient descent](./static/gradient-descent-1.png )
+
+---
+![gradient descent](./static/gradient-descent-2.png )
+
+---
+
+![gradient descent](./static/opt2.gif )
+
+---
 predict
+
+---
+
+references
+
+[mobilenet_v2](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet/mobilenet_v2.py)
