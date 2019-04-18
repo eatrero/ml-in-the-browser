@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx --no-html",
+    "build": "mdx-deck build deck.mdx --no-html && mkdir ./dist/static && cp ./static/*.* ./dist/static",
     "help": "mdx-deck"
   },
   "dependencies": {
