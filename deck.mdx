@@ -1,5 +1,5 @@
 export { future as theme } from 'mdx-deck/themes';
-import { Head, Appear } from 'mdx-deck';
+import { Head, Appear, Notes } from 'mdx-deck';
 import { CodeSurfer } from 'mdx-deck-code-surfer';
 import nightOwl from 'prism-react-renderer/themes/nightOwl';
 
@@ -18,13 +18,23 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 ##### Weedmaps Tech Meetup
 
 ---
-<h1>Tensorflow</h1>
+<h1>Demo</h1>
 
+---
+<h2>Machine Learning</h2>
 <Appear>
-  <p>Library released by Google Brain team in 2015.</p>
-  <p>Processing multidimensional array (like neural networks)</p>
-  <p>CPUs, GPUs, TPUs</p>
+  <h3>Computer Vision</h3>
+  <h4>Image Classification</h4>
+  <p>Convolutional Neural Network (CNN)</p>
 </Appear>
+
+---
+<Appear>
+  <h1>1. Model</h1>
+  <h1>2. Train</h1>
+  <h1>3. Predict</h1>
+</Appear>
+
 
 ---
 <h1>Tensorflow</h1>
@@ -37,18 +47,17 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 </Appear>
 
 ---
-Neural Networks
-
----
 <h3>Convolutional Neural Networks</h3>
 ![cnn](./static/cnn.png )
 
+<Notes>
 convolution 
 
 kernel... looking for spatial coherence
 analagous to plaaying with slides
 
 O(n^2 * sizeof(layers) * sizeof(data_set)) = weeks w/ $10k rig of high end cards
+</Notes>
 ---
 
 <h3>convolution</h3>
@@ -63,12 +72,13 @@ Transfer Learning
 ![cnn](./static/cnn.png )
 
 ---
-<Appear>
-  <h1>1. Model</h1>
-  <h1>2. Train</h1>
-  <h1>3. Predict</h1>
-</Appear>
+<h1>Tensorflow</h1>
 
+<Appear>
+  <p>Library released by Google Brain team in 2015.</p>
+  <p>Processing multidimensional array (like neural networks)</p>
+  <p>CPUs, GPUs, TPUs</p>
+</Appear>
 ---
 
 <CodeSurfer
@@ -136,6 +146,7 @@ train
 
 ---
 
+<h3> Stochastic Gradient Descent </h3>
 ![gradient descent](./static/gradient-descent-1.png )
 
 ---
