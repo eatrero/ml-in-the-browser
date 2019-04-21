@@ -1,4 +1,5 @@
-export { future as theme } from 'mdx-deck/themes';
+import WmLogo from './src/wm-logo'
+export theme from './src/theme';
 import { Head, Appear, Notes } from 'mdx-deck';
 import { CodeSurfer } from 'mdx-deck-code-surfer';
 import nightOwl from 'prism-react-renderer/themes/nightOwl';
@@ -9,7 +10,8 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 
 ## ML in the Browser
 ### with Tensorflow.js
-
+<br />
+  <WmLogo/>
 <br />
 <br />
 
@@ -33,17 +35,6 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
   <h1>1. Model</h1>
   <h1>2. Train</h1>
   <h1>3. Predict</h1>
-</Appear>
-
-
----
-<h1>Tensorflow</h1>
-
-<Appear>
-  <p>Library released by Google Brain team in 2015.</p>
-  <p>Processing multidimensional array (like neural networks)</p>
-  <p>CPUs, GPUs, TPUs</p>
-  <p>architecture handles parallel</p>
 </Appear>
 
 ---
@@ -78,6 +69,14 @@ Transfer Learning
   <p>Library released by Google Brain team in 2015.</p>
   <p>Processing multidimensional array (like neural networks)</p>
   <p>CPUs, GPUs, TPUs</p>
+  <p>architecture handles parallel</p>
+</Appear>
+
+---
+<h1>Tensorflow.js</h1>
+
+<Appear>
+  <p>Uses browser GPU</p>
 </Appear>
 ---
 
