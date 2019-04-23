@@ -27,7 +27,7 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 </Appear>
 
 <Notes>
-- other CV: object detection, defect detection in manufacturing, autonomous vehicle navigation, military
+  <p>other CV: object detection, defect detection in manufacturing, autonomous vehicle navigation, military</p>
 </Notes>
 
 ---
@@ -46,10 +46,10 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 ![cnn](./static/cnn.png )
 
 <Notes>
-- templates (convolutions)
-- classifers (arranged)
-- analog world
-- hardware / algos didn't exist
+  <p>templates (convolutions)</p>
+  <p>classifers (arranged)</p>
+  <p>analog world</p>
+  <p>hardware / algos didn't exist</p>
 </Notes>
 
 ---
@@ -58,9 +58,9 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 ![cnn](./static/2d-convolution.gif)
 
 <Notes>
-- why? how well does this match w/ my template?
-- what? compute dot product (element by element multiply than sum)
-- same concept used in cellular networks, gps, deep space comm, except your templates are electromagnetic waves
+  <p>why? how well does this match w/ my template?</p>
+  <p>what? compute dot product (element by element multiply than sum)</p>
+  <p>same concept used in cellular networks, gps, deep space comm, except your templates are electromagnetic waves</p>
 </Notes>
 ---
 
@@ -75,10 +75,10 @@ Machine Learning Steps:
 </Appear>
 
 <Notes>
-- model usually a NN
-- train on labeled data
-- predict
-- rinse wash repeat cycle
+<p> model usually a NN</p>
+<p> train on labeled data</p>
+<p>predict</p>
+<p> rinse wash repeat cycle</p>
 </Notes>
 
 
@@ -87,11 +87,11 @@ Machine Learning Steps:
 ![cnn](./static/cnn.png )
 
 <Notes>
-- models take enormous times to optimize (days/weeks on data sets of millions of images)
-- transfer learning
-- take an existing model
-- freeze feature extraction. keep the weights
-- new classifier. train quickly (minutes/hours).
+  <p>models take enormous times to optimize (days/weeks on data sets of millions of images)</p>
+  <p>transfer learning</p>
+  <p> take an existing model</p>
+  <p>freeze feature extraction. keep the weights</p>
+  <p>new classifier. train quickly (minutes/hours).</p>
 </Notes>
 
 ---
@@ -108,7 +108,7 @@ Machine Learning Steps:
 
 <Appear>
   <p>The JS version of tensorflow</p>
-  <p>Uses browser GPU</p>
+  <p>Uses GPU via WebGL shaders</p>
   <p>ML portion of the demo in less than 100 lines</p>
 </Appear>
 ---
@@ -160,6 +160,9 @@ Machine Learning Steps:
 
 <Notes>
   <p>error function</p>
+  <p>solving for slope is zero</p>
+  <p>closed form solution is hard for higher dimensions</p>
+  <p>as name implies you take random steps, compute error</p>
   <p>can be computed because you know what the data should be, and the result of your model</p>
   <p>i.e. i gave my model a picture of a cat, but the model classified it as a dog</p>
   <p>minimize error function</p>
@@ -195,6 +198,11 @@ Machine Learning Steps:
   <p>tf.tidy cleans up memory when you're done.</p>
 </Notes>
 
+---
+
+<Notes>
+  <p>demo</p>
+</Notes>
 
 ---
 
