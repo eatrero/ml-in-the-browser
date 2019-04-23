@@ -20,21 +20,25 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 ##### Weedmaps Tech Meetup
 
 ---
-<h1>Demo</h1>
-
----
 <h2>Machine Learning</h2>
 <Appear>
   <h3>Computer Vision</h3>
   <h4>Image Classification</h4>
-  <p>Convolutional Neural Network (CNN)</p>
 </Appear>
 
+<Notes>
+- other CV: object detection, defect detection in manufacturing, autonomous vehicle navigation, military
+</Notes>
+
 ---
+<h1>Demo</h1>
+
+---
+<h2>Machine Learning</h2>
+  <h3>Computer Vision</h3>
+  <h4>Image Classification</h4>
 <Appear>
-  <h1>1. Model</h1>
-  <h1>2. Train</h1>
-  <h1>3. Predict</h1>
+  <p>Convolutional Neural Network (CNN)</p>
 </Appear>
 
 ---
@@ -42,122 +46,163 @@ import nightOwl from 'prism-react-renderer/themes/nightOwl';
 ![cnn](./static/cnn.png )
 
 <Notes>
-convolution 
-
-kernel... looking for spatial coherence
-analagous to plaaying with slides
-
-O(n^2 * sizeof(layers) * sizeof(data_set)) = weeks w/ $10k rig of high end cards
+- templates (convolutions)
+- classifers (arranged)
+- analog world
+- hardware / algos didn't exist
 </Notes>
+
 ---
 
-<h3>convolution</h3>
+<h3>What is a Convolution?</h3>
 ![cnn](./static/2d-convolution.gif)
 
+<Notes>
+- why? how well does this match w/ my template?
+- what? compute dot product (element by element multiply than sum)
+- same concept used in cellular networks, gps, deep space comm, except your templates are electromagnetic waves
+</Notes>
 ---
 
 <h3>weights</h3>
 ![cnn](./static/weights.jpg)
 ---
-Transfer Learning
+Machine Learning Steps:
+<Appear>
+  <h1>1. Model</h1>
+  <h1>2. Train</h1>
+  <h1>3. Predict</h1>
+</Appear>
+
+<Notes>
+- model usually a NN
+- train on labeled data
+- predict
+- rinse wash repeat cycle
+</Notes>
+
+
+---
+<h3>Transfer Learning</h3>
 ![cnn](./static/cnn.png )
+
+<Notes>
+- models take enormous times to optimize (days/weeks on data sets of millions of images)
+- transfer learning
+- take an existing model
+- freeze feature extraction. keep the weights
+- new classifier. train quickly (minutes/hours).
+</Notes>
 
 ---
 <h1>Tensorflow</h1>
 
 <Appear>
   <p>Library released by Google Brain team in 2015.</p>
-  <p>Processing multidimensional array (like neural networks)</p>
+  <p>Processing multidimensional arrays (tensors)</p>
   <p>CPUs, GPUs, TPUs</p>
-  <p>architecture handles parallel</p>
 </Appear>
 
 ---
 <h1>Tensorflow.js</h1>
 
 <Appear>
+  <p>The JS version of tensorflow</p>
   <p>Uses browser GPU</p>
+  <p>ML portion of the demo in less than 100 lines</p>
 </Appear>
 ---
 
+<h1>Model</h1>
+
+---
+
 <CodeSurfer
-  code={require('!raw-loader!./code/train.js')}
+  code={require('!raw-loader!./code/model.js')}
   lang="javascript"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    { range: [1, 67] },
-    { range: [9, 34] },
-    { lines: [12] },
+    { range: [1, 56] },
+    { range: [1, 10] },
+    { range: [18, 44] },
+    { range: [47, 52] },
   ]}
 />
 
----
-
-<h1>tf.sequential()</h1>
-
-
-<Appear>
-  <p>Creates a tf.Sequential model.</p> 
+<Notes>
   <p>A sequential model is any model where the outputs of one layer are the inputs to the next layer</p>
   <p>The model topology is a simple 'stack' of layers, with no branching or skipping.</p>
-</Appear>
+</Notes>
+
 
 ---
 
+<h1>Training</h1>
+
+---
 <CodeSurfer
   code={require('!raw-loader!./code/train.js')}
   lang="javascript"
   showNumbers={true}
   theme={nightOwl}
   steps={[
-    { lines: [12] },
-    { lines: [13, 33], notes: "layers" },
-    { range: [14,17] },
-    { range: [18,24] },
-    { range: [25,32] },
-    { range: [9,34] },
+    { range: [1,23] },
+    { lines: [13] },
+    { lines: [14] },
   ]}
 />
-
----
-![gradient descent](./static/mobilenet.png )
-
----
-
-train
-
----
-
-<CodeSurfer
-  code={require('!raw-loader!./code/train.js')}
-  lang="javascript"
-  showNumbers={true}
-  theme={nightOwl}
-  steps={[
-    { range: [57, 66] },
-  ]}
-/>
-
 
 ---
 
 <h3> Stochastic Gradient Descent </h3>
 ![gradient descent](./static/gradient-descent-1.png )
 
----
-![gradient descent](./static/gradient-descent-2.png )
+<Notes>
+  <p>error function</p>
+  <p>can be computed because you know what the data should be, and the result of your model</p>
+  <p>i.e. i gave my model a picture of a cat, but the model classified it as a dog</p>
+  <p>minimize error function</p>
+</Notes>
 
 ---
 
 ![gradient descent](./static/opt2.gif )
 
----
-predict
 
 ---
 
-references
+<h1>Predict</h1>
 
+---
+
+<CodeSurfer
+  code={require('!raw-loader!./code/predict.js')}
+  lang="javascript"
+  showNumbers={true}
+  theme={nightOwl}
+  steps={[
+    { range: [1, 31] },
+    { range: [4, 19] },
+    { lines: [8,9,10] },
+    { lines: [12,13,14] },
+    { lines: [18] },
+    { range: [21, 25] },
+  ]}
+/>
+
+<Notes>
+  <p>tf.tidy cleans up memory when you're done.</p>
+</Notes>
+
+
+---
+
+<h1>Thanks!</h1>
+
+---
+
+<h1>References</h1>
+<p>[https://playground.tensorflow.org/](https://playground.tensorflow.org/)</p>
 <p>slides => ![slides](./static/qr.png)</p>
 <p>[https://github.com/eatrero/transfer-learning](https://github.com/eatrero/transfer-learning)</p>
